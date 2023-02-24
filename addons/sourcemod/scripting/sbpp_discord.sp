@@ -31,6 +31,15 @@ public void OnPluginStart() {
 	RelayHelper_PluginStart();
 	
 	AutoExecConfig(true, PLUGIN_NAME);
+	
+	/* Incase of a late load */
+	for(int i = 1; i <= MaxClients; i++) {
+		if(!IsClientInGame(i) || IsFakeClient(i) || IsClientSourceTV(i) || g_sClientAvatar[i][0]) {
+			return;
+		}
+		
+		OnClientPostAdminCheck(i);
+	}
 }
 
 public void OnClientPostAdminCheck(int client) {
