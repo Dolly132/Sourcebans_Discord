@@ -7,6 +7,7 @@
 #define REQUIRE_PLUGIN
 
 #define PLUGIN_NAME "Sourcebans_Discord"
+#define STEAM_API_CVAR "sbpp_steam_api"
 
 #include <relay_helper>
 
