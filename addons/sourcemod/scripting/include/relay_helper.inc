@@ -27,7 +27,7 @@ enum struct Global_Stuffs {
 }
 
 stock void RelayHelper_PluginStart() {
-	g_cvSteamAPI = CreateConVar("sbpp_steam_api", "", "API Web Steam. Get your own https://steamcommunity.com/dev/apikey", FCVAR_PROTECTED);
+	g_cvSteamAPI = CreateConVar(STEAM_API_CVAR, "", "API Web Steam. Get your own https://steamcommunity.com/dev/apikey", FCVAR_PROTECTED);
 }
 
 stock void GetClientSteamAvatar(int client) {
